@@ -1,0 +1,749 @@
+\section{\subTopicOne}
+
+    \subsection{Review of vector algebra}
+
+        \subsubsection{Addition of vectors}
+            Two or more vectors may be added by geometrical laws, which are discussed below:
+            \begin{enumerate}
+                \item \textit{Triangle law of vector addition}
+
+                    \textit{\ul{Statement}}: If two vectors are represented both in magnitude and direction by two sides of a triangle taken in the \textit{same order}, then their resultant vector is represented both in magnitude and direction by the third side of the triangle taken in the \textit{opposite order}.
+
+                    \textbf{Note}: Vectors are in the \textit{same order} when one's origin coincides with the other's terminus; otherwise, they are in the \textit{opposite order}.
+
+                    \textit{\ul{Demonstration}}:
+                    \begin{enumerate}[I.]
+                        \item Suppose there are two vectors $\va*{A}$ and $\va*{B}$ which are to be added. In general, they may lie anywhere with respect to each other.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-10_tri-add-step-01.jpg}
+                        % \end{figure*}
+
+                        \item Then we displace either of the vectors parallel to itself and place it such that its origin coincides with the terminus of the other vector (or vice versa).
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-11_tri-add-step-02.jpg}
+                        % \end{figure*}
+
+                        \item The resultant vector sum $\va*{A}+\va*{B}=\va*{B}+\va*{A}$ is a vector pointing from the non-coinciding origin to terminus.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-12_tri-add-step-03.jpg}
+                        % \end{figure*}
+                    \end{enumerate}
+
+                \item \textit{Parallelogram law of vector addition}
+
+                    \textit{\ul{Statement}}: If two vectors acting at the same point are represented both in magnitude and direction by the adjacent sides of a parallelogram, then their resultant is represented both in magnitude and direction by the diagonal of that parallelogram passing through the same point.
+
+                    \textit{\ul{Demonstration}}:
+                    \begin{enumerate}[I.]
+                        \item Suppose there are two vectors $\va*{A}$ and $\va*{B}$ which are to be added. Here as well, in general, they may lie anywhere with respect to each other.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-13_par-add-step-01.jpg}
+                        % \end{figure*}
+
+                        \item Then we displace either of the vectors parallel to itself and place it such that their origins coincide.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-14_par-add-step-02.jpg}
+                        % \end{figure*}
+
+                        \item We complete the parallelogram by drawing two line segments parallel to $\va*{A}$ and $\va*{B}$ from their respective termini.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-15_par-add-step-03.jpg}
+                        % \end{figure*}
+
+                        \item The resultant vector sum $\va*{R}=\va*{A}+\va*{B}$ is the vector along the \textit{main diagonal} of the parallelogram, i.e. the one whose origin also coincides with the common origins of $\va*{A}$ and $\va*{B}$.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-16_par-add-step-04.jpg}
+                        % \end{figure*}
+                    \end{enumerate}
+
+                \item \textit{Polygon law of vector addition}
+
+                    \textit{\ul{Statement}}: If several vectors are represented both in magnitude and direction by the sides of a polygon taken in order, then their resultant is represented both in magnitude and direction by the closing side taken in reverse order.
+
+                    \textit{\ul{Demonstration}}:
+                    \begin{enumerate}[I.]
+                        \item Suppose there are four vectors $\va*{A}$, $\va*{B}$, $\va*{C}$ and $\va*{D}$ which are to be added.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-17_pol-add-step-01.jpg}
+                        % \end{figure*}
+
+                        \item Then we rearrange the vectors in such a way that they are in order, thereby forming the sides of a polygon, except for the closing side.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-18_pol-add-step-02.jpg}
+                        % \end{figure*}
+
+                        \item The resultant vector sum $\va*{R}=\va*{A}+\va*{B}+\va*{C}+\va*{D}$ is the vector along the closing side of the polygon taken in the opposite order.
+                        % \begin{figure*}[h!]
+                        %     \centering
+                        %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-19_pol-add-step-03.jpg}
+                        % \end{figure*}
+                    \end{enumerate}
+            \end{enumerate}
+
+            \paragraph{Properties of vector addition:}
+            \begin{enumerate}[i.]
+                \item Vector addition is \textit{commutative}, i.e.
+                $$\va*{A}+\va*{B}=\va*{B}+\va*{A}$$
+
+                \item Vector addition is \textit{associative}, i.e.
+                $$\va*{A}+\qty(\va*{B}+\va*{C})=\qty(\va*{A}+\va*{B})+\va*{C}$$
+
+                \item Vector addition is \textit{distributive}, i.e.
+                $$\lambda\qty(\va*{A}+\va*{B})=\lambda\va*{A}+\lambda\va*{B}$$
+                where $\lambda$ is a real number.
+
+                \item The sum of two negative vectors is a null vector. So if vectors $\va*{A}$ and $\va*{B}$ are negatives of each other, i.e.
+                $$\va*{A}=-\va*{B}$$
+                then we have
+                $$\va*{A}+\va*{B}=\va*{0}$$
+            \end{enumerate}
+
+            \paragraph{Magnitude of the vector sum:}
+
+            \quad
+            \bigskip
+            
+            Given two vectors $\va*{A}$ and $\va*{B}$ and their resultant $\va*{R}=\va*{A}+\va*{B}$ as per the parallelogram law.
+            \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.3\textwidth]{figures/fig_vec-sum-mag.png}
+                \caption{Magnitude of a vector sum}
+                \label{fig:vec-sum-mag}
+            \end{figure}
+
+            Consider the construction as given in figure \ref{fig:vec-sum-mag}. Because now that $OPSQ$ is a parallelogram, we have
+            \begin{align*}
+                OP=QS&=|\va*{A}|=A \\
+                OQ=SP&=|\va*{B}|=B \\
+                \qq{and}OS&=|\va*{R}|=R
+            \end{align*}
+
+            Let $\theta$ be the angle between vectors $\va*{A}$ and $\va*{B}$. Then we have $\angle{SPN}=\theta$. Hence, from $\triangle{PSN}$, we obtain
+            \begin{align*}
+                PN=SP\cos{\theta}&=B\cos{\theta} \\
+                \qq{and}SN=SP\sin{\theta}&=B\sin{\theta}
+            \end{align*}
+
+            Then in $\triangle{OSN}$, using Pythagoras' theorem, we get
+            \begin{align*}
+                OS^2&=ON^2+SN^2 \\
+                \implies OS^2&=\qty(OP+PN)^2+SN^2 \\
+                \implies R^2&=\qty(A+B\cos{\theta})^2+\qty(B\sin{\theta})^2 \\
+                    &=A^2+B^2\cos^2{\theta}+2AB\cos{\theta}+B^2\sin^2{\theta} \\
+                    &=A^2+B^2\qty(\cos^2{\theta}+\sin^2{\theta})+2AB\cos{\theta} \\
+                \implies R^2&=A^2+B^2+2AB\cos{\theta}
+            \end{align*}
+
+            Therefore,
+            \begin{align*}
+                \Aboxed{|\va*{A}+\va*{B}|=\sqrt{A^2+B^2+2AB\cos{\theta}}}
+            \end{align*}
+
+            \paragraph{Direction of the vector sum:}
+
+            \quad
+            \bigskip
+            
+            Let $\alpha$ be the angle between the resultant vector $\va*{R}=\va*{A}+\va*{B}$. Because direction of the vector $\va*{A}$ is already known, knowing the angle $\alpha$ would enable us to know the direction of $\va*{R}$ with respect to $\va*{A}$.
+
+            From $\triangle{OSN}$, we obtain,
+            \begin{align*}
+                \tan{\alpha}&=\dfrac{SN}{ON} \\
+                    &=\dfrac{SN}{OP+PN} \\
+                \implies\tan{\alpha}&=\dfrac{B\sin{\theta}}{A+B\cos{\theta}}
+            \end{align*}
+
+            Therefore,
+            \begin{align*}
+                \Aboxed{\alpha=\tan^{-1}{\qty(\dfrac{B\sin{\theta}}{A+B\cos{\theta}})}}
+            \end{align*}
+
+            \paragraph{Subtraction on vectors}
+
+            \quad
+            \bigskip
+
+            The subtraction of a vector from another may be defined in terms of the addition of one vector with the negative of the other vector, i.e.
+            $$\va*{A}-\va*{B}=\va*{A}+\qty(-\va*{B})$$
+            The magnitude of the vector difference is:
+            \begin{align*}
+                \Aboxed{|\va*{A}-\va*{B}|=\sqrt{A^2+B^2-2AB\cos{\theta}}}
+            \end{align*}
+
+        \subsubsection{Resolution of vectors}
+            Suppose we have a certain vector $\va*{A}$ and two arbitrary vectors $\va*{x}$ and $\va*{y}$, all of them being coplanar.
+            % \begin{figure}[h!]
+            %     \centering
+            %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-31_vec-resol-01.jpg}
+            % \end{figure}
+            
+            Let us now perform the following geometrical constructions.
+            \begin{enumerate}[I.]
+                \item Through the origin $O$ of vector $\va*{A}$, we draw a straight line parallel to $\va*{x}$.
+                % \begin{figure}[h!]
+                %     \centering
+                %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-31_vec-resol-02.jpg}
+                % \end{figure}
+                
+                \item Through the terminus $P$ of vector $\va*{A}$, we draw another straight line parallel to $\va*{y}$.
+                % \begin{figure}[h!]
+                %     \centering
+                %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-31_vec-resol-03.jpg}
+                % \end{figure}
+                
+                \item Let the point of intersection of these two straight lines be $Q$.
+                % \begin{figure}[h!]
+                %     \centering
+                %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-31_vec-resol-04.jpg}
+                % \end{figure}
+            \end{enumerate}
+    
+            We define the following two vectors:
+            \begin{align*}
+                \overline{OQ}&:\qq{origin at $O$, terminus at $Q$} \\
+                \overline{QP}&:\qq{origin at $Q$, terminus at $P$}
+            \end{align*}
+            % \begin{figure}[h!]
+            %     \centering
+            %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-31_vec-resol-05.jpg}
+            % \end{figure}
+            Then, by triangle law of vector addition, we have
+            \begin{align}
+                \va*{A}=\overline{OQ}+\overline{QP} \label{eqn:vec-resolution-01}
+            \end{align}
+    
+            We know that when a vector is multiplied by some scalar, we obtain another parallel vector with different magnitude. Conversely, for two parallel vectors, one of them can be expressed as a scalar multiple of the other.
+    
+            Consequently, because $\overline{OQ}\,\parallelto\,\va*{x}$, we have
+            \begin{align}
+                \overline{OQ}=\alpha\va*{x} \label{eqn:vec-resolution-02}
+            \end{align}
+            Also, because $\overline{QP}\,\parallelto\,\va*{y}$, we have
+            \begin{align}
+                \overline{QP}=\beta\va*{y} \label{eqn:vec-resolution-03}
+            \end{align}
+            where $\alpha$, $\beta$ are some arbitrary constant scalars.
+    
+            Using equations (\ref{eqn:vec-resolution-02}) and (\ref{eqn:vec-resolution-03}) in equation (\ref{eqn:vec-resolution-01}) gives
+            \begin{align}
+                \va*{A}=\alpha\va*{x}+\beta\va*{y} \label{eqn:vec-resolution-04}
+            \end{align}
+            % \begin{figure}[h!]
+            %     \centering
+            %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-31_vec-resol-06.jpg}
+            % \end{figure}
+    
+            Therefore, equation (\ref{eqn:vec-resolution-04}) shows that given some specific vector, it can be expressed as a vector sum of two arbitrary vectors, with each being multiplied by some constant scalars, and all of them lying on a plane.
+    
+            Then we may say that the given vector has been resolved along two arbitrary vectors on the same plane, and the procedure followed to do so is known as the \textit{resolution of a vector}.
+
+        \subsubsection{Vector products}
+
+            \paragraph{Scalar or dot product:}
+                Given two vectors $\va*{A}$ and $\va*{B}$ which have an angle $\theta$ between them, their scalar product is a scalar quantity which equals the product of their magnitudes and the cosine of the angle between them.
+
+                It is expressed mathematically as
+                \begin{align*}
+                    \va*{A}\vdot\va*{B}&=|\va*{A}||\va*{B}|\cos{\theta} \\
+                    \qq{or,}\Aboxed{\va*{A}\vdot\va*{B}&=AB\cos{\theta}}
+                \end{align*}
+                where $A=|\va*{A}|$ and $B=|\va*{B}|$.
+
+                Some of the properties of the dot product are:
+                \begin{enumerate}
+                    \item \textit{Commutativity}: The order of vectors does not matter, i.e.
+                    $$\va*{A}\cdot\va*{B}=\va*{B}\cdot\va*{A}$$
+    
+                    \item \textit{Distributivity}: The scalar product distributes over vector addition, i.e.
+                    $$\va*{A}\cdot\qty(\va*{B}+\va*{C})=\va*{A}\cdot\va*{B}+\va*{A}\cdot\va*{C}$$
+    
+                    \item The scalar product of a vector with itself equals the square of its magnitude, i.e.
+                    $$\va*{A}\cdot\va*{A}=A^2$$
+    
+                    \item Multiplying either of the vectors by a scalar affects the scalar product by the same factor, i.e.
+                    $$\qty(\lambda\va*{A})\cdot\va*{B}=\va*{A}\cdot\qty(\lambda\va*{B})=\lambda\qty(\va*{A}\cdot\va*{B})$$
+                \end{enumerate}
+
+            \paragraph{Vector or cross product:}
+                Given two vectors $\va*{A}$ and $\va*{B}$ which have an angle $\theta$ between them, their vector product is another vector quantity which is perpendicular to the plane that contains both $\va*{A}$ and $\va*{B}$, and is denoted by $\va*{A}\cross\va*{B}$.
+
+                \renewcommand\labelitemi{--}
+                \begin{itemize}
+                    \item The magnitude of $\va*{A}\cross\va*{B}$ is obtained as
+                    \begin{align*}
+                        |\va*{A}\cross\va*{B}|=AB\sin{\theta}
+                    \end{align*}
+
+                    \item The direction of $\va*{A}\cross\va*{B}$ is obtained using the right-hand thumb rule, which is applied as follows:
+                    % \begin{figure}[b]
+                    %     \centering
+                    %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-27_cross-prod-02.jpg}
+                    %     \caption{Right-hand thumb rule for vector product}
+                    %     \label{fig:rht-rule}
+                    % \end{figure}
+                    \begin{quote}
+                        If the fingers of one's right hand are curled from the first vector to the second, then the stretched thumb of the right hand points in the direction of their cross product.
+                    \end{quote}
+
+                    \item The vector product is anti-commutative, i.e.
+                    \begin{align*}
+                        \va*{A}\cross\va*{B}=-\va*{B}\cross\va*{A}
+                    \end{align*}
+
+                    Because $\va*{A}\cross\va*{B}$ and $\va*{B}\cross\va*{A}$ are negatives of each other, the order of the cross product is important.
+                    % \begin{figure}[h!]
+                    %     \centering
+                    %     \includegraphics[width=0.3\textwidth,frame]{chapters/chapter-00/figures/fig-28_cross-prod-03.jpg}
+                    %     \caption{Changing the order of the vectors changes their cross product}
+                    %     \label{fig:cross-prod-anticomm}
+                    % \end{figure}
+
+                    \item The generic form of the cross product is as follows:
+                    \begin{align*}
+                        \underbrace{\mybox}_{1^\text{st}\text{ vector}}\times\underbrace{\mybox}_{2^\text{nd}\text{ vector}}
+                    \end{align*}
+                \end{itemize}
+
+                Some of the properties of the cross product are:
+                \begin{enumerate}
+                    \item \textit{Anti-commutativity}: The order of vectors is important, and reversing it changes the direction of the vector product, i.e.
+                    $$\va*{A}\cross\va*{B}=-\va*{B}\cross\va*{A}$$
+    
+                    \item \textit{Perpendicularity}: The resultant vector product is perpendicular to the plane containing the original vectors.
+    
+                    \item \textit{Magnitude}: The magnitude of the vector product is the area of the parallelogram formed by the two vectors.
+    
+                    \item \textit{Distributivity}: The vector product distributes over vector addition, i.e.
+                    $$\va*{A}\cross\qty(\va*{B}+\va*{C})=\va*{A}\cross\va*{B}+\va*{A}\cross\va*{C}$$
+                \end{enumerate}
+
+            \paragraph{Scalar triple product:} Given three vectors $\va*{A}$, $\va*{B}$ and $\va*{C}$, their scalar triple product is given as
+            \begin{align*}
+                [\va*{A}\va*{B}\va*{C}]&=\va*{A}\cdot\qty(\va*{B}\cross\va*{C})
+            \end{align*}
+            It is calculated as the determinant of a $3\times 3$ matrix formed by the component vectors, with a result of zero indicating the vectors are coplanar.
+
+            \renewcommand\labelitemi{--}
+            \begin{itemize}
+                \item The operation combines a dot product and a cross product acting on three vectors to produce a scalar quantity.
+            \end{itemize}
+
+        \subsubsection{Cartesian components of a vector}
+            \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.25\textwidth]{figures/fig_cartesian-resolution-01.png}
+            \end{figure}
+            Suppose we consider that, as a special case, $\vu*{x}$ and $\vu*{y}$ are the unit vectors which are perpendicular to each other, as we express
+            \begin{align*}
+                \vu*{x}=\vu*{i}&\qq{and}\vu*{y}=\vu*{j} \\
+                &\therefore\;\vu*{i}\perp\vu*{j}
+            \end{align*}
+            Also, we would have
+            \begin{align*}
+                |\vu*{x}|=|\vu*{i}|&=1 \\
+                \text{and }|\vu*{y}|=|\vu*{j}|&=1
+            \end{align*}
+            We refer to these perpendicular directions as $x$-axis and $y$-axis.
+
+            Let us also express the constant scalars as
+            \begin{align*}
+                \alpha=A_x\qq{and}\beta=A_y
+            \end{align*}
+
+            Hence, from equation (\ref{eqn:vec-resolution-04}) we have
+            \begin{align}
+                \va*{A}&=\alpha\va*{x}+\beta\va*{y} \nonumber\\
+                \implies\Aboxed{\va*{A}&=A_x\va*{i}+A_y\va*{j}} \label{eqn:vec-resolution-05}
+            \end{align}
+
+            From equation (\ref{eqn:vec-resolution-05}), we can say that the vector $\va*{A}$ has been  resolved into its Cartesian components $A_x$ and $A_y$, which are given as
+            \begin{align*}
+                A_x&=A\cos{\theta} \\
+                A_y&=A\sin{\theta}
+            \end{align*}
+            where $\theta$ is the angle between $\va*{A}$ and the $x$-axis.
+
+            Conversely, we have,
+            \begin{align*}
+                A&=\sqrt{A_x^2+A_y^2} \\
+                \theta&=\tan^{-1}\qty(\dfrac{A_y}{A_x})
+            \end{align*}
+            \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.22\textwidth]{figures/fig_cartesian-resolution-02.png}
+            \end{figure}
+
+            \newpage
+            We can extend the above idea to 3-dimensional space by including a third axis $z$ which is perpendicular to both $x$ and $y$ axes.
+            \begin{figure}[h!]
+                \centering
+                \includegraphics[width=0.4\textwidth]{figures/fig_cartesian-resolution-3d.png}
+            \end{figure}
+            If $\vu*{k}$ is the unit vector along the $z$-axis, then we can resolve $\va*{A}$ into its three Cartesian components $A_x$, $A_y$ and $A_z$ as
+            \begin{align*}
+                \Aboxed{\va*{A}&=A_x\vu*{i}+A_y\vu*{j}+A_z\vu*{k}}
+            \end{align*}
+            Knowing the components $A_x$, $A_y$ and $A_z$, the magnitude of $\va*{A}$ can be obtained as
+            \begin{align*}
+                \Aboxed{A&=\sqrt{A_x^2+A_y^2+A_z^2}}
+            \end{align*}
+
+            \paragraph{Test for perpendicular vectors}
+                Given two vectors $\va*{A}$ and $\va*{B}$ which are perpendicular to one another, i.e the angle between them is $\theta=\dfrac{\pi}{2}\,\unit{\radian}$.
+
+                Then their scalar product it
+                \begin{align*}
+                    \va*{A}\cdot\va*{B}&=AB\cos\qty(\dfrac{\pi}{2}) \\
+                    \implies\Aboxed{\va*{A}\cdot\va*{B}&=0}
+                \end{align*}
+                Therefore, if $\va*{A}\perp\va*{B}$, then $\va*{A}\cdot\va*{B}=0$ and vice versa.
+
+            \paragraph{Test for collinear vectors}
+                When two vectors $\va*{A}$ and $\va*{B}$ are collinear, they may either be parallel ($\va*{A}\,\parallelto\,\va*{B}$) or anti-parallel (($\va*{A}\,\antiparallelto\,\va*{B}$)).
+                \begin{enumerate}[a)]
+                    \item If $\va*{A}\,\parallelto\,\va*{B}$, then the angle between them is $\theta=0$. Hence the magnitude of their vector product is
+                    \begin{align*}
+                        |\va*{A}\cross\va*{B}|&=AB\sin{0} \\
+                        \implies\Aboxed{|\va*{A}\cross\va*{B}|&=0}
+                    \end{align*}
+                    \item If $\va*{A}\,\antiparallelto\,\va*{B}$, then the angle between them is $\theta=\pi$. Hence the magnitude of their vector product is
+                    \begin{align*}
+                        |\va*{A}\cross\va*{B}|&=AB\sin{\pi} \\
+                        \implies\Aboxed{|\va*{A}\cross\va*{B}|&=0}
+                    \end{align*}
+                \end{enumerate}
+                Therefore, it $\va*{A}||\va*{B}$, then $\va*{A}\cross\va*{B}=\overline{0}$ and vice versa.
+
+    \subsection{Vector differentiation}
+
+        \subsubsection{Scalar and vector fields}
+            A field refers to a quantity whose value is a function of position in a region of space. There are two types of fields:
+            \begin{enumerate}
+                \item \textbf{Scalar field:} If for every point $P$ at position $\vb{r}=(x,y,z)$ of a region $R$ in space there corresponds a unique scalar $\phi$, then $\phi(\vb{r})$ is known as a \textit{scalar field}.
+
+                Examples:
+                \begin{enumerate}[i.]
+                    \item Temperature distribution in a rigid body
+                    \item Local density of a liquid
+                    \item Potential due to gravity
+                \end{enumerate}
+
+                \item \textbf{Vector field:} If for every point $P$ at position $\vb{r}=(x,y,z)$ of a region $R$ in space there corresponds a unique vector $\vb{v}$, then $\vb{v}(\vb{r})$ is known as a \textit{vector field}.
+
+                Examples:
+                \begin{enumerate}[i.]
+                    \item Heat flow rate in a conductor
+                    \item Local velocity of a fluid
+                    \item Electrostatic field
+                \end{enumerate}
+            \end{enumerate}
+
+        \subsubsection{The vector differential operator ($\vb{\nabla}$)}
+            The vector differential operator, commonly denoted by the symbol $\vb{\nabla}$ and referred to as \textit{del} or \textit{nabla}, is a fundamental tool in vector calculus. In a three-dimensional Cartesian coordinate system, it is defined as:
+            \begin{align*}
+                \boxed{\grad\equiv\vu{x}\pdv{x}+\vu{y}\pdv{y}+\vu{z}\pdv{z}}
+            \end{align*}
+
+        \subsubsection{Gradient of a scalar field}
+            Given a scalar field $\phi(x,y,z)$, its gradient, denoted by $\grad{\phi}$ or $\text{grad}\,\phi$, is given as
+            \begin{align*}
+                \boxed{\grad{\phi}=\text{grad}\,\phi=\vu{x}\pdv{\phi}{x}+\vu{y}\pdv{\phi}{y}+\vu{z}\pdv{\phi}{z}}
+            \end{align*}
+            \textbf{Example}: Find the gradient of the scalar field $\phi(x,y,z)=2y^3+4xz+3x$.\\
+            \textbf{Solution}: The partial derivatives of the given scalar field are:
+            \begin{align*}
+                \begin{matrix}
+                    {\pdv{\phi}{x}=\pdv{x}\qty(2y^3+4xz+3x)} & {} & {\pdv{\phi}{y}=\pdv{y}\qty(2y^3+4xz+3x)} & {} & {\pdv{\phi}{z}=\pdv{z}\qty(2y^3+4xz+3x)} \\
+                    {\implies\pdv{\phi}{x}=4z+3} & {} & {\implies\pdv{\phi}{y}=6y^2} & {} & {\implies\pdv{\phi}{z}=4x}
+                \end{matrix}
+            \end{align*}
+            Therefore the gradient of $\phi$ is
+            \begin{align*}
+                \grad{\phi}&=\vu{x}\pdv{\phi}{x}+\vu{y}\pdv{\phi}{y}+\vu{z}\pdv{\phi}{z} \\
+                \implies\grad{\phi}&=\vu{x}\qty(4z+3)+\vu{y}6y^2+\vu{z}4x
+            \end{align*}
+
+            \paragraph{Geometrical interpretation:}
+                Let $S$ be a surface represented by $f(x,y,z)=c=\text{constant}$, where $f$ is differentiable. Such a surface is called a \textit{level surface} of $f$, and for different $c$ we get different level surfaces.
+                \begin{figure}[h!]
+                    \centering
+                    \includegraphics[width=0.45\textwidth]{figures/fig_gradient-geometrical.png}
+                \end{figure}
+
+                Now let $C$ be a curve on $S$ through a point $P$ of $S$. As a curve in space, $C$ can be written as
+                \begin{align*}
+                    \vb{r}(s)=\vu{x}x(s)+\vu{y}y(s)+\vu{z}z(s)
+                \end{align*}
+                We can thereby obtain a tangent vector $\vb{t}$ by differentiating $\vb{r}$ with respect to $s$, i.e.
+                \begin{align*}
+                    \vb{t}=\dv{\vb{r}}{s}=\vu{x}\dv{x}{s}+\vu{y}\dv{y}{s}+\vu{z}\dv{z}{s}
+                \end{align*}
+                Because $C$ lies on the surface $S$, we have
+                \begin{align*}
+                    f[x(s),y(s),z(s)]&=c \\
+                    \implies\dv{f}{s}&=0 \\
+                    \implies\pdv{f}{x}\dv{x}{s}+\pdv{f}{y}\dv{y}{s}+\pdv{f}{z}\dv{z}{s}&=0 \\
+                    \implies\underbrace{\qty(\vu{x}\pdv{f}{x}+\vu{y}\pdv{f}{y}+\vu{z}\pdv{f}{z})}_{=\grad{f}}\cdot\underbrace{\qty(\vu{x}\dv{x}{s}+\vu{y}\dv{y}{s}+\vu{z}\dv{z}{s})}_{=\vb{t}}&=0 \\
+                    \implies\grad{f}\cdot\vb{t}&=0 \\
+                    \implies\grad{f}&\perp\vb{t}
+                \end{align*}
+                Therefore, the gradient of a scalar field at a point is normal (or perpendicular) to the tangent plane at that point.
+                
+                % Geometrically, the gradient of a scalar field $\phi(x,y,z)$ at any point $P$ is a vector that possesses two key characteristics:
+                % \begin{enumerate}
+                %     \item \textit{Direction}: The gradient vector $\grad{\phi}$ is normal (perpendicular) to the level surface $\phi(x,y,z)=c$ that passes through the point $P$.
+                %     \item \textit{Magnitude}: The magnitude of the gradient vector $|\grad{\phi}|$ represents the maximum rate of change (the greatest rate of increase) of the scalar field $\phi$ at that specific point.
+                % \end{enumerate}
+                % \begin{figure}[h!]
+                %     \centering
+                %     \includegraphics[width=0.4\textwidth]{figures/fig_geometry-gradient.png}
+                % \end{figure}
+
+            \setcounter{equation}{0}
+            \paragraph{Normal:}
+                If $\phi(x,y,z)$ is a scalar field, then we have
+                \begin{align}
+                    \dd{\phi}&=\pdv{\phi}{x}\dd{x}+\pdv{\phi}{y}\dd{y}+\pdv{\phi}{z}\dd{z} \label{eqn:d-phi}
+                \end{align}
+                Now $\phi(x,y,z)=c$ represents a family of surfaces for different values of the constant $c$. Hence,
+                \begin{align}
+                    \dd{\phi}&=\dd{c} \nonumber\\
+                    \implies\dd{\phi}&=0 \nonumber\\
+                    \implies\pdv{\phi}{x}\dd{x}+\pdv{\phi}{y}\dd{y}+\pdv{\phi}{z}\dd{z}&=0\qq{[using eqn. (\ref{eqn:d-phi})]} \label{eqn:d-phi-expansion}
+                \end{align}
+                For a displacement $\dd{\vb{r}}$ along the surface, we have
+                \begin{align}
+                    \dd{\vb{r}}=\vu{x}\dd{x}+\vu{y}\dd{y}+\vu{z}\dd{z} \label{eqn:d-r}
+                \end{align}
+                We can now write equation (\ref{eqn:d-phi-expansion}) as
+                \begin{align*}
+                    \qty(\vu{x}\pdv{\phi}{x}+\vu{y}\pdv{\phi}{y}+\vu{z}\pdv{\phi}{z})&\cdot\qty(\vu{x}\dd{x}+\vu{y}\dd{y}+\vu{z}\dd{z})=0 \\
+                    \implies\grad{\phi}&\cdot\dd{\vb{r}}=0\qq{[using eqn. (\ref{eqn:d-r})]} \\
+                    \implies\grad{\phi}&\perp\dd{\vb{r}}
+                \end{align*}
+                Because $\dd{\vb{r}}$ is directed along the surface and $\vb{\nabla}$ is perpendicular to it, hence the gradient $\vb{\nabla}$ is a vector which is normal to the surface $\phi(x,y,z)=c$.
+
+            \setcounter{equation}{0}
+            \paragraph{Directional derivative:}
+                Given a scalar field $\phi(x,y,z)$, its directional derivative $D_{\vb{b}}\phi$ or $\dv{\phi}{s}$ at a point $P$ in the direction of a unit vector $\vb{b}$ is defined by
+                \begin{align}
+                    D_{\vb{b}}\phi=\dv{\phi}{s}=\lim_{s\to 0}{\dfrac{\phi(Q)-\phi(P)}{s}} \label{eqn:directional-dvt:defn}
+                \end{align}
+                \begin{figure}[h!]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{figures/fig_directional-dvt.png}
+                \end{figure}
+                As shown above, $Q$ is a variable point on the straight line $L$ in the direction of $\vb{b}$, and $|s|$ is the distance between $P$ and $Q$.
+                \begin{align*}
+                    {s>0}&\implies\text{ $Q$ lies in the direction of $\vb{b}$ from $P$} \\
+                    {s<0}&\implies\text{ $Q$ lies in the direction of $-\vb{b}$ from $P$} \\
+                    {s=0}&\implies\text{ $Q=P$}
+                \end{align*}
+
+                Now, for any arbitrary point with position vector $\vb{r}$ that lies on the line $L$, its coordinates are all functions of $s$ and we may write
+                \begin{align*}
+                    \vb{r}(s)&=\vu{x}x(s)+\vu{y}y(s)+\vu{z}z(s)=\vb{p}_0+s\vb{b}
+                \end{align*}
+                where $\vb{p}_0$ is the constant position vector of the point $P$. Differentiating the above with respect to $s$, we obtain
+                \begin{align}
+                    \dv{\vb{r}}{s}=\vu{x}\dv{x}{s}+\vu{y}\dv{y}{s}+\vu{z}\dv{z}{s}&=\underbrace{\dv{\vb{p}_0}{s}}_{=0}+\vb{b}\dv{s}{s} \nonumber\\
+                    \implies\vu{x}\dv{x}{s}+\vu{y}\dv{y}{s}+\vu{z}\dv{z}{s}&=\vb{b} \label{eqn:directional-dvt:drds-b}
+                \end{align}
+                Because $\phi$ implicitly depends on $s$ through $x$, $y$ and $z$, we can use the chain rule to obtain
+                \begin{align}
+                    \dv{\phi}{s}&=\pdv{\phi}{x}\dv{x}{s}+\pdv{\phi}{y}\dv{y}{s}+\pdv{\phi}{z}\dv{z}{s} \nonumber\\
+                        &=\qty(\vu{x}\pdv{\phi}{x}+\vu{y}\pdv{\phi}{y}+\vu{z}\pdv{\phi}{z})\cdot\qty(\vu{x}\dv{x}{s}+\vu{y}\dv{y}{s}+\vu{z}\dv{z}{s}) \nonumber\\
+                    \implies\dv{\phi}{s}&=\grad{\phi}\cdot\vb{b}\qq{[using eqn. (\ref{eqn:directional-dvt:drds-b})]} \label{eqn:directional-dvt:dphi-ds}
+                \end{align}
+                From equations (\ref{eqn:directional-dvt:defn}) and (\ref{eqn:directional-dvt:dphi-ds}), we obtain
+                \begin{align*}
+                    \Aboxed{D_{\vb{b}}\phi&=\vb{b}\cdot\grad{\phi}}
+                \end{align*}
+
+                \textbf{Example}: Find the directional derivative of the scalar field $\phi(x,y,z)=2x^2+3y^2+z^2$ at point $P(2,1,3)$ in the direction of vector $\vb{a}=\vu{x}-2\vu{z}$.\\
+                \textbf{Solution}: The gradient of the scalar field is
+                \begin{align*}
+                    \grad{\phi}&=4x\vu{x}+6y\vu{y}+2z\vu{z}
+                \end{align*}
+                The unit vector along the direction of the vector $\vb{a}$ is
+                \begin{align*}
+                    \vb{b}&=\dfrac{\vb{a}}{|\vb{a}|}=\dfrac{\vu{x}-2\vu{z}}{\sqrt{1^2+(-2)^2}} \\
+                    \implies\vb{b}&=\dfrac{1}{\sqrt{5}}\qty(\vu{x}-2\vu{z})
+                \end{align*}
+                The directional derivative of $\phi$ at any arbitrary point in the direction of $\vb{b}$ is
+                \begin{align*}
+                    D_{\vb{b}}\phi&=\vb{b}\cdot\grad{\phi} \\
+                        &=\dfrac{1}{\sqrt{5}}\qty(\vu{x}-2\vu{z})\cdot\qty(4x\vu{x}+6y\vu{y}+2z\vu{z}) \\
+                        &=\dfrac{1}{\sqrt{5}}\qty(4x-4z) \\
+                    \implies D_{\vb{b}}\phi&=\dfrac{4}{\sqrt{5}}(x-z)
+                \end{align*}
+                Therefore, at point $P(2,1,3)$, the directional derivative is
+                \begin{align*}
+                    D_{\vb{b}}\phi(P)&=\dfrac{4}{\sqrt{5}}\qty(2-3) \\
+                        &=-\dfrac{4}{\sqrt{5}}
+                \end{align*}
+
+        \subsubsection{Divergence of a vector field}
+            Given a vector field $\vb{v}(x,y,z)=\vu{x}v_x+\vu{y}v_y+\vu{z}v_z$, where $v_x$, $v_y$ and $v_z$ are the components of $\vb{v}$, its divergence, denoted by $\div{\vb{v}}$ or $\text{div}\;\vb{v}$, is given as
+            \begin{align*}
+                \boxed{\div{\vb{v}}=\text{div}\;\vb{v}=\pdv{v_x}{x}+\pdv{v_y}{y}+\pdv{v_z}{z}}
+            \end{align*}
+            \textbf{Example}: Find the divergence of the vector field $\vb{v}=\vu{x}3xz+\vu{y}2xy-\vu{z}yz^2$.\\
+            \textbf{Solution}: The components of the given vector field are
+            \begin{align*}
+                v_x=3xz\qquad v_y=2xy\qquad v_z=-yz^2
+            \end{align*}
+            Hence, the required partial derivatives are
+            \begin{align*}
+                \begin{matrix}
+                    {\pdv{v_x}{x}=\pdv{x}\qty(3xz)} & {} & {\pdv{v_y}{y}=\pdv{y}\qty(2xy)} & {} & {\pdv{v_z}{z}=\pdv{z}\qty(-yz^2)} \\
+                    {\implies\pdv{v_x}{x}=3z} & {} & {\implies\pdv{v_y}{y}=2x} & {} & {\implies\pdv{v_z}{z}=-2yz}
+                \end{matrix}
+            \end{align*}
+            Therefore, the divergence of $\vb{v}$ is
+            \begin{align*}
+                \div{\vb{v}}&=\pdv{v_x}{x}+\pdv{v_y}{y}+\pdv{v_z}{z} \\
+                \implies\div{\vb{v}}&=3z+2x-2yz
+            \end{align*}
+
+            \paragraph{Geometrical interpretation:}
+                We consider the motion of a fluid in a region $R$ having no sources or sinks in $R$, that is, no points at which fluid is produced or disappears. We assume that this fluid is compressible. Their density $\rho$ depends on the coordinates $x$, $y$, $z$ in space and may also depend on time $t$.
+                \begin{figure}[h!]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{figures/fig_divergence-geometrical.png}
+                \end{figure}
+                
+                We consider the flow through a rectangular box $B$ of small edges $\Delta x$, $\Delta y$, $\Delta z$ parallel to the coordinate axes as shown in the figure above. The volume of the box is
+                \begin{align*}
+                    \Delta V=\Delta x\Delta y\Delta z
+                \end{align*}
+                Let $\vb{v}=\vu{x}v_x+\vu{y}v_y+\vu{z}v_z$ be the velocity vector of the fluid. Then the vector field $\vb{u}=\rho\vb{v}$ gives the mass flow rate of the fluid (i.e. momentum per unit volume), written as
+                \begin{align*}
+                    \vb{u}&=\rho\qty(\vu{x}v_x+\vu{y}v_y+\vu{z}v_z) \\
+                        &=\vu{x}u_x+\vu{y}u_y+\vu{z}u_z
+                \end{align*}
+                During a time interval $\Delta t$ mass of fluid entering the face of cross-section area $\Delta x\Delta z$, at the face perpendicular to the $y$-axis as shown in the figure, is $(u_y)_y\Delta x\Delta z\Delta t=\dfrac{(u_y)_y\Delta V\Delta t}{\Delta y}$.
+
+                Likewise, the mass of fluid leaving the face of cross-section area $\Delta x\Delta z$ on the opposite face, perpendicular to the $y$-axis, is $(u_y)_{y+\Delta y}\Delta x\Delta z\Delta t=\dfrac{(u_y)_{y+\Delta y}\Delta V\Delta t}{\Delta y}$.
+
+                Hence, the mass lost across this pair of opposite faces perpendicular to the $y$-axis is
+                \begin{align*}
+                    (\Delta m)_y&=\dfrac{(u_y)_{y+\Delta y}\Delta V\Delta t}{\Delta y}-\dfrac{(u_y)_y\Delta V\Delta t}{\Delta y}\\
+                        &=\qty[\dfrac{(u_y)_{y+\Delta y}-(u_y)_y}{\Delta y}]\Delta V\Delta t \\
+                    \implies(\Delta m)_y&=\dfrac{\Delta u_y}{\Delta y}\Delta V\Delta t
+                \end{align*}
+                where $\Delta u_y=(u_y)_{y+\Delta y}-(u_y)_y$.
+
+                In a similar manner, the mass lost across the pairs of opposite faces perpendicular to the $x$ and $z$ axes can be shown to be
+                \begin{align*}
+                    (\Delta m)_x=\dfrac{\Delta u_x}{\Delta x}\Delta V\Delta t\qq{and}(\Delta m)_z=\dfrac{\Delta u_z}{\Delta z}\Delta V\Delta t
+                \end{align*}
+                
+                Therefore, the total mass lost during the time interval $\Delta t$ is
+                \begin{align*}
+                    \Delta m&=(\Delta m)_x+(\Delta m)_y+(\Delta m)_z \\
+                    \implies\Delta m&=\qty(\dfrac{\Delta u_x}{\Delta x}+\dfrac{\Delta u_y}{\Delta y}+\dfrac{\Delta u_z}{\Delta z})\Delta V\Delta t \\
+                    \implies\dfrac{\Delta m}{\Delta V\Delta t}&=\dfrac{\Delta u_x}{\Delta x}+\dfrac{\Delta u_y}{\Delta y}+\dfrac{\Delta u_z}{\Delta z}
+                \end{align*}
+                As the box becomes infinitessimally small, we have
+                $$\Delta x, \Delta y, \Delta z, \Delta t, \Delta V, \Delta m\to 0$$
+                Thereby we get
+                \begin{align*}
+                    \lim_{\Delta x, \Delta y, \Delta z\to 0}\qty(\dfrac{\Delta u_x}{\Delta x}+\dfrac{\Delta u_y}{\Delta y}+\dfrac{\Delta u_z}{\Delta z})&=\lim_{\Delta m,\Delta V\Delta t\to 0}\qty(\dfrac{\Delta m}{\Delta V\Delta t}) \\
+                    \implies\pdv{u_x}{x}+\pdv{u_y}{y}+\pdv{u_z}{z}&=\dfrac{\dd{m}}{\dd{V}\dd{t}} \\
+                    \implies\div{\vb{u}}&=\qty{\begin{matrix}
+                        \text{mass flow} \\
+                        \text{per unit volume} \\
+                        \text{per unit time}
+                    \end{matrix}}
+                \end{align*}
+
+                Therefore, the divergence of a vector field at a point measures the net flow of the vector field per unit volume at the given point.
+                \begin{itemize}
+                    \item[$\blacktriangleright$] $\div{\vb{v}}<0$: The vector field $\vb{v}$ is \textit{contracting inward}, i.e. acts as a \textit{sink}.
+
+                    \item[$\blacktriangleright$] $\div{\vb{v}}>0$: The vector field $\vb{v}$ is \textit{expanding outward}, i.e. acts as a \textit{source}.
+
+                    \item[$\blacktriangleright$] $\div{\vb{v}}=0$: The vector field $\vb{v}$ is \textit{incompressible}, i.e. amount entering a region equals the amount leaving. Such fields are said to be \textbf{solenoidal}.
+                \end{itemize}
+                \begin{figure}[h!]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{figures/fig_divergence-cases.png}
+                \end{figure}
+
+        \subsubsection{Curl of a vector field}
+            Given a vector field $\vb{v}(x,y,z)=\vu{x}v_x+\vu{y}v_y+\vu{z}v_z$, where $v_x$, $v_y$ and $v_z$ are the components of $\vb{v}$, its curl, denoted by $\curl{\vb{v}}$ or $\text{curl}\;\vb{v}$, is given as
+            \begin{align*}
+                \curl{\vb{v}}=\text{curl}\;\vb{v}&=\begin{vmatrix}
+                    {\vu{x}} & {\vu{y}} & {\vu{z}} \\
+                    {\pdv*{x}} & {\pdv*{y}} & {\pdv*{z}} \\
+                    {v_x} & {v_y} & {v_z}
+                \end{vmatrix} \\
+                \implies\Aboxed{\curl{\vb{v}}&=\vu{x}\qty(\pdv{v_z}{y}-\pdv{v_y}{z})+\vu{y}\qty(\pdv{v_x}{z}-\pdv{v_z}{x})+\vu{z}\qty(\pdv{v_y}{x}-\pdv{v_x}{y})}
+            \end{align*}
+            \textbf{Example}: Find the curl of the vector field $\vb{v}=\vu{x}yz+\vu{y}3zx+\vu{z}z$.\\
+            \textbf{Solution}: The components of the vector field are
+            \begin{align*}
+                v_x=yz\qquad v_y=3zx\qquad v_z=z
+            \end{align*}
+            Therefore the curl of $\vb{v}$ is
+            \begin{align*}
+                \curl{\vb{v}}&=\begin{vmatrix}
+                    {\vu{x}} & {\vu{y}} & {\vu{z}} \\
+                    {\pdv*{x}} & {\pdv*{y}} & {\pdv*{z}} \\
+                    {v_x} & {v_y} & {v_z}
+                \end{vmatrix} \\
+                    &=\begin{vmatrix}
+                    {\vu{x}} & {\vu{y}} & {\vu{z}} \\
+                    {\pdv*{x}} & {\pdv*{y}} & {\pdv*{z}} \\
+                    {yz} & {3zx} & {z}
+                \end{vmatrix} \\
+                    &=\vu{x}\qty[\pdv{y}(z)-\pdv{z}(3zx)]+\vu{y}\qty[\pdv{z}(yz)-\pdv{x}(z)]+\vu{z}\qty[\pdv{x}(3zx)-\pdv{y}(yz)] \\
+                    &=\vu{x}\qty(0-3x)+\vu{y}\qty(y-0)+\vu{z}\qty(3z-z) \\
+                \implies\curl{\vb{v}}&=-\vu{x}3x+\vu{y}y+\vu{z}2z
+            \end{align*}
+
+        \subsubsection{The Laplacian ($\nabla^2$) operator}
+
+        \subsubsection{Vector differential identities}
+
+        \subsubsection{The Jacobian}
+
+    \subsection{Vector integration}
+
+        \subsubsection{Infinitessimal elements}
+
+            \paragraph{Line element}
+
+            \paragraph{Surface element}
+
+            \paragraph{Volume element}
+
+        \subsubsection{The line integral}
+
+        \subsubsection{The surface integral}
+
+            \paragraph{Flux of a vector field}
+
+        \subsubsection{The volume integral}
+
+        \subsubsection{Gauss' divergence theorem}
+
+            \paragraph{Applications}
+
+        \subsubsection{Stokes' theorem}
+
+            \paragraph{Applications}
+
+        \subsubsection{Green's theorem}
+
+            \paragraph{Applications}
