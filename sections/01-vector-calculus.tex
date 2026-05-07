@@ -615,9 +615,48 @@
 			\implies\curl{\vb{v}}&=-\vu{x}3x+\vu{y}y+\vu{z}2z
 		\end{align*}
 		
-	\subsection{The Laplacian ($\nabla^2$) operator}
+	\subsection{The Laplacian ($\laplacian$) operator}
+		The Laplacian operator, denoted by $\laplacian$, is a second order differential operator. In three-dimensional Cartesian coordinate system, it is defined as
+		\begin{align*}
+			\boxed{\laplacian\equiv\pdv[2]{x}+\pdv[2]{y}+\pdv[2]{z}}
+		\end{align*}
+		In two- and one-dimensional Cartesian coordinates, the Laplacian operator is
+		\begin{align*}
+			\boxed{\laplacian=\pdv[2]{x}+\pdv[2]{y}}\qq{and}\boxed{\laplacian=\dv[2]{x}}
+		\end{align*}
+		
+		\subsubsection{Laplacian of a scalar field}
+			Given a scalar field $\phi$, its Laplacian is obtained as the divergence of its gradient, i.e.
+			\begin{align*}
+				\laplacian{\phi}=\div{\qty(\grad{\phi})}
+			\end{align*}
+			
+		\subsubsection{Laplacian of a vector field}
+			Given a vector field $\vb{v}=\vu{x}v_x+\vu{y}v_y+\vu{z}v_z$, its Laplacian is obtained by applying the $\laplacian$ operator on its scalar components, i.e.
+			\begin{align*}
+				\laplacian{\vb{v}}=\vu{x}\laplacian{v_x}+\vu{y}\laplacian{v_y}+\vu{z}\laplacian{v_z}
+			\end{align*}
+			
+		\textbf{Example}: Find the Laplacian of $\phi=e^{xyz}$.\\
+		\textbf{Solution}: The partial derivatives of the given scalar field are:
+		\begin{align*}
+			\pdv{\phi}{x}=yze^{xyz}\quad&\implies\pdv[2]{\phi}{x}=y^2z^2e^{xyz} \\
+			\pdv{\phi}{y}=xze^{xyz}\quad&\implies\pdv[2]{\phi}{y}=x^2z^2e^{xyz} \\
+			\pdv{\phi}{z}=xye^{xyz}\quad&\implies\pdv[2]{\phi}{z}=x^2y^2e^{xyz}
+		\end{align*}
+		Therefore, the Laplacian of the given scalar field is
+		\begin{align*}
+			\laplacian{\phi}&=\pdv[2]{\phi}{x}+\pdv[2]{\phi}{y}+\pdv[2]{\phi}{z} \\
+				&=y^2z^2e^{xyz}+x^2z^2e^{xyz}+x^2y^2e^{xyz} \\
+			\implies\laplacian{\phi}&=\qty(y^2z^2+x^2z^2+x^2y^2)e^{xyz}
+		\end{align*}
 	
 	\subsection{Vector differential identities}
+		\subsubsection{Product rules}
+			\begin{enumerate}[(i)]
+				\item $\grad{\qty(fg)}=f\grad{g}+g\grad{f}$
+				\item $\grad{\qty(\vb{A}\cdot\vb{B})}=\vb{A}\cross\qty(\curl{\vb{B}})+\vb{B}\cross\qty(\curl{\vb{A}})+\qty(\vb{A}\cdot\grad)\vb{B}+\qty(\vb{B}\cdot\grad)\vb{A}$
+			\end{enumerate}
 	
 	\subsection{The Jacobian}
 	
