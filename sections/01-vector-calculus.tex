@@ -625,11 +625,11 @@
 			\boxed{\laplacian=\pdv[2]{x}+\pdv[2]{y}}\qq{and}\boxed{\laplacian=\dv[2]{x}}
 		\end{align*}
 		
-		\subsubsection{Laplacian of a scalar field}
-			Given a scalar field $\phi$, its Laplacian is obtained as the divergence of its gradient, i.e.
-			\begin{align*}
-				\laplacian{\phi}=\div{\qty(\grad{\phi})}
-			\end{align*}
+%		\subsubsection{Laplacian of a scalar field}
+%			Given a scalar field $\phi$, its Laplacian is obtained as the divergence of its gradient, i.e.
+%			\begin{align*}
+%				\laplacian{\phi}=\div{\qty(\grad{\phi})}
+%			\end{align*}
 			
 		\subsubsection{Laplacian of a vector field}
 			Given a vector field $\vb{v}=\vu{x}v_x+\vu{y}v_y+\vu{z}v_z$, its Laplacian is obtained by applying the $\laplacian$ operator on its scalar components, i.e.
@@ -656,37 +656,118 @@
 			\begin{enumerate}[(i)]
 				\item $\grad{\qty(fg)}=f\grad{g}+g\grad{f}$
 				\item $\grad{\qty(\vb{A}\cdot\vb{B})}=\vb{A}\cross\qty(\curl{\vb{B}})+\vb{B}\cross\qty(\curl{\vb{A}})+\qty(\vb{A}\cdot\grad)\vb{B}+\qty(\vb{B}\cdot\grad)\vb{A}$
+				\item $\div{\qty(f\vb{A})}=f\qty(\div{\vb{A}})+\vb{A}\cdot\qty(\grad{f})$
+				\item $\div{\qty(\vb{A}\cross\vb{B})}=\vb{B}\cdot\qty(\curl{\vb{A}})-\vb{A}\cdot\qty(\curl{\vb{B}})$
+				\item $\curl{\qty(f\vb{A})}=f\qty(\curl{\vb{A}})-\vb{A}\cross\qty(\grad{f})$
+				\item $\curl{\qty(\vb{A}\cross\vb{B})}=\qty(\vb{B}\cdot\grad)\vb{A}-\qty(\vb{A}\cdot\grad)\vb{B}+\vb{A}\qty(\div{\vb{B}})-\vb{B}\qty(\div{\vb{A}})$
+			\end{enumerate}
+			
+		\subsubsection{Quotient rules}
+			\begin{enumerate}[(i)]
+				\item $\displaystyle\grad{\qty(\dfrac{f}{g})}=\dfrac{g\grad{f}-f\grad{g}}{g^2}$
+				\item $\displaystyle\div{\qty(\dfrac{\vb{A}}{g})}=\dfrac{g\qty(\div{\vb{A}})-\vb{A}\cdot\qty(\grad{g})}{g^2}$
+				\item $\displaystyle\curl{\qty(\dfrac{\vb{A}}{g})}=\dfrac{g\qty(\curl{\vb{A}})+\vb{A}\cross\qty(\grad{g})}{g^2}$
+			\end{enumerate}
+			
+		\subsubsection{Second derivatives}
+			\begin{enumerate}[(i)]
+				\item $\div{\qty(\grad{\phi})}=\laplacian{\phi}$
+				\item $\curl{\qty(\grad{\phi})}=\vb{0}$
+				\item $\div{\qty(\curl{\vb{v}})}=0$
+				\item $\curl{\qty(\curl{\vb{v}})}=\grad{\qty(\div{\vb{v}})}-\laplacian{\vb{v}}$
 			\end{enumerate}
 	
 	\subsection{The Jacobian}
-	
-\newpage
-\section{Vector integration}
-
-	\subsection{Infinitessimal elements}
-	
-		\subsubsection{Line element}
+		In physical systems, coordinate transformations are often necessary to exploit the inherent symmetry of a problem, such as using polar coordinates for central force problems. When changing variables in multi-dimensional integration, the ``volume'' or ``area'' element changes. The Jacobian is the mathematical scaling factor that relates these differential elements between different coordinate systems.
 		
-		\subsubsection{Surface element}
+		Consider a transformation from variables $(u, v)$ to $(x, y)$, where $x = x(u, v)$ and $y = y(u, v)$ are continuously differentiable functions. The Jacobian $J$ of $x$ and $y$ with respect to $u$ and $v$ is defined by the following determinant:
+		\begin{align*}
+			J=\dfrac{\partial(x,y)}{\partial(u,v)}&\equiv\begin{vmatrix}
+				{\pdv{x}{u}} & {\pdv{x}{v}} \\
+				{} & {} \\
+				{\pdv{y}{u}} & {\pdv{y}{v}}
+			\end{vmatrix}
+		\end{align*}
 		
-		\subsubsection{Volume element}
+		For a three-dimensional system where $x$, $y$, $z$ are functions of $u$, $v$, $w$, the above definition of the Jacobian can be generalized as the following $3\times 3$ determinant:
+			\begin{align*}
+			J=\dfrac{\partial(x,y,z)}{\partial(u,v,w)}&\equiv\begin{vmatrix}
+				{\pdv{x}{u}} & {\pdv{x}{v}} & {\pdv{x}{w}} \\
+				{} & {} & {} \\
+				{\pdv{y}{u}} & {\pdv{y}{v}} & {\pdv{y}{w}} \\
+				{} & {} & {} \\
+				{\pdv{z}{u}} & {\pdv{z}{v}} & {\pdv{z}{w}}
+			\end{vmatrix}
+		\end{align*}
 		
-	\subsection{The line integral}
-	
-	\subsection{The surface integral}
-	
-		\subsubsection{Flux of a vector field}
+		The differential volume element transforms between the coordinate systems as
+		\begin{align*}
+			\dd{x}\dd{y}\dd{z}=\qty|\dfrac{\partial(x,y,z)}{\partial(u,v,w)}|\dd{u}\dd{v}\dd{w}
+		\end{align*}
 		
-	\subsection{The volume integral}
-	
-	\subsection{Gauss' divergence theorem}
-	
-		\subsubsection{Applications}
+		\textbf{Example}: Find the differential volume element in spherical polar coordinates.\\
+		\textbf{Solution}: The transformation equations from spherical polar coordinates $(r,\theta,\phi)$ to Cartesian coordinates $(x,y,z)$ are as follows:
+		\begin{align*}
+			x&=r\sin{\theta}\cos{\phi} \\
+			y&=r\sin{\theta}\sin{\phi} \\
+			z&=r\cos{\theta}
+		\end{align*}
 		
-	\subsection{Stokes' theorem}
+		We obtain the Jacobian as
+		\begin{align*}
+			J=\dfrac{\partial(x,y,z)}{\partial(r,\theta,\phi)}&=\begin{vmatrix}
+				{\pdv{x}{r}} & {\pdv{x}{\theta}} & {\pdv{x}{\phi}} \\
+				{} & {} & {} \\
+				{\pdv{y}{r}} & {\pdv{y}{\theta}} & {\pdv{y}{\phi}} \\
+				{} & {} & {} \\
+				{\pdv{z}{r}} & {\pdv{z}{\theta}} & {\pdv{z}{\phi}}
+			\end{vmatrix} \\
+				&=\begin{vmatrix}
+					{\sin{\theta}\cos{\phi}} & {r\cos{\theta}\cos{\phi}} & {-r\sin{\theta}\sin{\phi}} \\
+					{\sin{\theta}\sin{\phi}} & {r\cos{\theta}\sin{\phi}} & {r\sin{\theta}\cos{\phi}} \\
+					{\cos{\theta}} & {-r\sin{\theta}} & {0}
+				\end{vmatrix} \\
+				&=\cos{\theta}\qty(r^2\sin{\theta}\cos{\theta}\cos^2{\phi}+r^2\sin{\theta}\cos{\theta}\sin^2{\phi}) \\
+				&\quad+r\sin{\theta}\qty(r\sin^2{\theta}\cos^2{\phi}+r\sin^2{\theta}\sin^2{\phi}) \\
+				&=r^2\sin{\theta}\cos^2{\theta}\underbrace{\qty(\cos^2{\phi}+\sin^2{\phi})}_{=1}+r^2\sin^3{\theta}\underbrace{\qty(\cos^2{\phi}+\sin^2{\phi})}_{=1} \\
+				&=r^2\sin{\theta}\cos^2{\theta}+r^2\sin^3{\theta} \\
+				&=r^2\sin{\theta}\underbrace{\qty(\cos^2{\theta}+\sin^2{\theta})}_{=1} \\
+			\implies\qty|\dfrac{\partial(x,y,z)}{\partial(r,\theta,\phi)}|&=r^2\sin{\theta}
+		\end{align*}
+		Therefore, the differential volume element in spherical polar coordinates is
+		\begin{align*}
+			\dd{V}&=\dd{x}\dd{y}\dd{z} \\
+				&=\qty|\dfrac{\partial(x,y,z)}{\partial(r,\theta,\phi)}|\dd{r}\dd{\theta}\dd{\phi} \\
+			\implies\dd{V}&=r^2\sin{\theta}\dd{r}\dd{\theta}\dd{\phi}
+		\end{align*}
 	
-		\subsubsection{Applications}
-		
-	\subsection{Green's theorem}
-	
-		\subsubsection{Applications}
+%\newpage
+%\section{Vector integration}
+%
+%	\subsection{Infinitessimal elements}
+%	
+%		\subsubsection{Line element}
+%		
+%		\subsubsection{Surface element}
+%		
+%		\subsubsection{Volume element}
+%		
+%	\subsection{The line integral}
+%	
+%	\subsection{The surface integral}
+%	
+%		\subsubsection{Flux of a vector field}
+%		
+%	\subsection{The volume integral}
+%	
+%	\subsection{Gauss' divergence theorem}
+%	
+%		\subsubsection{Applications}
+%		
+%	\subsection{Stokes' theorem}
+%	
+%		\subsubsection{Applications}
+%		
+%	\subsection{Green's theorem}
+%	
+%		\subsubsection{Applications}
