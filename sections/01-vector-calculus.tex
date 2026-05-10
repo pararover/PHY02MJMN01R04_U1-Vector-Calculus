@@ -741,33 +741,132 @@
 			\implies\dd{V}&=r^2\sin{\theta}\dd{r}\dd{\theta}\dd{\phi}
 		\end{align*}
 	
-%\newpage
-%\section{Vector integration}
-%
-%	\subsection{Infinitessimal elements}
-%	
-%		\subsubsection{Line element}
-%		
-%		\subsubsection{Surface element}
-%		
-%		\subsubsection{Volume element}
-%		
-%	\subsection{The line integral}
-%	
-%	\subsection{The surface integral}
-%	
-%		\subsubsection{Flux of a vector field}
-%		
-%	\subsection{The volume integral}
-%	
-%	\subsection{Gauss' divergence theorem}
-%	
-%		\subsubsection{Applications}
-%		
-%	\subsection{Stokes' theorem}
-%	
-%		\subsubsection{Applications}
-%		
-%	\subsection{Green's theorem}
-%	
-%		\subsubsection{Applications}
+\newpage
+\section{Vector integration}
+
+	\subsection{Infinitessimal elements}
+		In vector calculus, infinitesimal elements are the fundamental building blocks used to perform vector integration over paths, surfaces and volumes. These elements represent tiny displacements, patches of area or chunks of volume that allow for the calculation of physical quantities such as work, flux and mass.
+	
+		\subsubsection{Line element}
+			The infinitesimal line element (or displacement vector), often denoted as $\dd{l}$ or $\dd{r}$, represents an infinitesimal movement from one point to a nearby point. Its mathematical form depends on the coordinate system used:
+			\begin{itemize}
+				\item Cartesian coordinates: $\dd{\vb{l}}=\dd{x}\vu{x}+\dd{y}\vu{y}+\dd{z}\vu{z}$
+				\item Spherical coordinates: $\dd{\vb{l}}=\dd{r}\vu{r}+r\dd{\theta}\uv{\theta}+r\sin{\theta}\dd{\phi}\uv{\phi}$
+				\item Cylindrical coordinates: $\dd{\vb{l}}=\dd{\rho}\uv{\rho}+\rho\dd{\phi}\uv{\phi}+\dd{z}\vu{z}$
+			\end{itemize}
+			The line element is essential for line integrals, such as calculating the work done by a force $\vb{F}$ along a path $C$, given by $\displaystyle W=\int_C{\vb{F}\cdot\dd{\vb{l}}}$. It always points in the direction of increasing parameters along the path.
+		
+		\subsubsection{Surface element}
+			The infinitesimal surface element, denoted as $\dd{\vb{a}}$ or $\dd{\vb{S}}$, is a vector quantity that represents a tiny patch of area. It has two defining characteristics: its magnitude is the infinitesimal scalar area $\dd{A}$, and its direction is normal (perpendicular) to the surface, represented by the unit vector $\vu{n}$. Hence $\dd{\vb{a}}=\vu{n}\dd{A}$.
+			
+			The specific form of da depends on the orientation of the surface:
+			\begin{itemize}
+				\item For a surface of constant radius $r$ in spherical coordinates (like a sphere):
+				$$\dd{\vb{a}}=r^2\sin{\theta}\dd{\theta}\dd{\phi}\vu{r}$$
+				\item For a surface in the $xy$-plane:
+				$$\dd{\vb{a}}=\pm\dd{x}\dd{y}\vu{z}$$
+			\end{itemize}
+			Surface elements are used to calculate the flux of a vector field through a surface, which is the integral $\displaystyle \int_S{\vb{v}\cdot\dd{\vb{s}}}$. For a closed surface, the normal vector $\vu{n}$ is conventionally chosen to point outward.
+		
+		\subsubsection{Volume element}
+			The infinitesimal volume element, denoted as $\dd{V}$ or $\dd{\tau}$, represents a ``tiny chunk'' of space. Unlike line and surface elements, the volume element is a scalar. Its expression across different coordinate systems is:
+			\begin{itemize}
+				\item Cartesian coordinates: $\dd{\tau}=\dd{x}\dd{y}\dd{z}$
+				\item Spherical coordinates: $\dd{\tau}=r^2\sin{\theta}\dd{r}\dd{\theta}\dd{\phi}$
+				\item Cylindrical coordinates: $\dd{\tau}=\rho\dd{\rho}\dd{\phi}\dd{z}$
+			\end{itemize}
+		
+	\subsection{The line integral}
+		A line integral is an expression of the form
+		$$\int\limits_{\vb{a}}^{\vb{b}}{\vb{v}\cdot\dd{\vb{l}}}$$
+		where $\vb{v}$ is a vector function, $\dd{\vb{l}}$ is the infinitesimal displacement vector, and the integral is to be carried out along a prescribed path from
+		point $\vb{a}$ to point $\vb{b}$, as shown in the figure below.
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.4\textwidth]{figures/fig_line-integral.png}
+		\end{figure}
+		\begin{itemize}
+			\item If the path in question forms a closed loop $C$, then we denote the line integral of $\vb{v}$ over $C$ as
+			$$\oint\limits_{C}{\vb{v}\cdot\dd{\vb{l}}}$$
+			\item At each point on the path, we take the dot product of $\vb{v}$ (evaluated at that point) with the displacement $\dd{\vb{l}}$ to the next point along the path.
+			\item The work done $W$ by a force $\vb{F}$ in moving a particle along some path $C$ is an example of a line integral, i.e.
+			$$W=\int\limits_{C}{\vb{F}\cdot\dd{\vb{l}}}$$
+			\item If the value of the line integral of a vector field $\vb{v}$ is independent of the path taken and depend only on the end points $\vb{a}$ and $\vb{b}$, then $\vb{v}$ is said to be a \emph{conservative }vector field.
+		\end{itemize}
+		\textbf{Example}: Calculate the line integral of the vector field $\vb{v}=y^2\vu{x}+2x(y+1)\vu{y}$ from the point $\vb{a}=(1,1,0)$ to the point $\vb{b}=(2,2,0)$ along the paths (1) and (2) as shown below.
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.3\textwidth]{figures/fig_line-integral-eg-01.png}
+		\end{figure}
+		
+		\textbf{Solution}: The line element in Cartesian coordinates is
+		$$\dd{\vb{l}}=\dd{x}\vu{x}+\dd{y}\vu{y}+\dd{z}\vu{z}$$
+		\begin{itemize}
+			\item The path (1) can be considered to be split between two segments: a horizontal segment (i) and a vertical segment (ii). So we have
+			\begin{align*}
+				\int_{(1)}{\vb{v}\cdot\dd{\vb{l}}}&=\int_{(i)}{\vb{v}\cdot\dd{\vb{l}}}+\int_{(ii)}{\vb{v}\cdot\dd{\vb{l}}}
+			\end{align*}
+			\begin{itemize}
+				\item Along segment (i) $\dd{y}=\dd{z}=0$ and $y=1$, and so we have $\dd{\vb{l}}=\dd{x}\vu{x}$. Hence
+				\begin{align*}
+					\vb{v}\cdot\dd{\vb{l}}&=\qty[y^2\vu{x}+2x(y+1)\vu{y}]\cdot\qty(\dd{x}\vu{x}) \\
+					\implies\vb{v}\cdot\dd{\vb{l}}&=\underbrace{y^2}_{y=1}\dd{x}=\dd{x}
+				\end{align*}
+				Hence,
+				\begin{align*}
+					\int_{(i)}{\vb{v}\cdot\dd{\vb{l}}}=\int\limits_{x=1}^{x=2}{\vb{v}\cdot\dd{\vb{l}}}&=\int\limits_{x=1}^{x=2}{\dd{x}}=\left.x\right|_{1}^{2}=2-1=1
+				\end{align*}
+				\item Along segment (ii) $\dd{x}=\dd{z}=0$ and $x=2$, and so we have $\dd{\vb{l}}=\dd{y}\vu{y}$. Hence
+				\begin{align*}
+					\vb{v}\cdot\dd{\vb{l}}&=\qty[y^2\vu{x}+2x(y+1)\vu{y}]\cdot\qty(\dd{y}\vu{y}) \\
+					\implies\vb{v}\cdot\dd{\vb{l}}&=\underbrace{2x(y+1)}_{x=2}\dd{y}=4(y+1)\dd{y}
+				\end{align*}
+				Hence,
+				\begin{align*}
+					\int_{(ii)}{\vb{v}\cdot\dd{\vb{l}}}=\int\limits_{y=1}^{y=2}{\vb{v}\cdot\dd{\vb{l}}}&=\int\limits_{y=1}^{y=2}{4(y+1)\dd{y}}=\left.4\qty(\dfrac{y^2}{2}+y)\right|_{1}^{2}=4\qty(\dfrac{2^2}{2}+2-\dfrac{1^2}{2}-1)=10
+				\end{align*}
+			\end{itemize}
+			Therefore, the line integral of the vector field $\vb{v}$ along the path (1) is
+			\begin{align*}
+				\int_{(1)}{\vb{v}\cdot\dd{\vb{l}}}&=\int_{(i)}{\vb{v}\cdot\dd{\vb{l}}}+\int_{(ii)}{\vb{v}\cdot\dd{\vb{l}}} \\
+					&=1+10=11
+			\end{align*}
+			
+			\item The path (2) can be described by the equation $y=x$. Then we have $\dd{x}=\dd{y}$ and also $\dd{z}=0$. This gives us
+			\begin{align*}
+				\vb{v}&=x^2\vu{x}+2x(x+1)\vu{y} \\
+				\dd{\vb{l}}&=\dd{x}\vu{x}+\dd{x}\vu{y}
+			\end{align*}
+			Hence
+			\begin{align*}
+				\vb{v}\cdot\dd{\vb{l}}&=\qty[x^2\vu{x}+2x(x+1)\vu{y}]\cdot\qty(\dd{x}\vu{x}+\dd{x}\vu{y}) \\
+					&=x^2\dd{x}+2x(x+1)\dd{x} \\
+					&=\qty(3x^2+2x)\dd{x}
+			\end{align*}
+			Therefore, the line integral of the vector field $\vb{v}$ along the path (2) is
+			\begin{align*}
+				\int_{(2)}{\vb{v}\cdot\dd{\vb{l}}}&=\int\limits_{1}^{2}{\qty(3x^2+2x)\dd{x}} \\
+					&=\qty(3\dfrac{x^3}{3}+2\dfrac{x^2}{2})_{1}^{2} \\
+					&=\qty(x^3+x^2)_{1}^{2}=2^3+2^2-1^3-1^2 \\
+				\implies\int_{(2)}{\vb{v}\cdot\dd{\vb{l}}}&=10
+			\end{align*}
+			
+		\end{itemize}
+	
+	\subsection{The surface integral}
+	
+		\subsubsection{Flux of a vector field}
+		
+	\subsection{The volume integral}
+	
+	\subsection{Gauss' divergence theorem}
+	
+		\subsubsection{Applications}
+		
+	\subsection{Stokes' theorem}
+	
+		\subsubsection{Applications}
+		
+	\subsection{Green's theorem}
+	
+		\subsubsection{Applications}
