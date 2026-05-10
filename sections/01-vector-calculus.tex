@@ -779,7 +779,7 @@
 	\subsection{The line integral}
 		A line integral is an expression of the form
 		$$\int\limits_{\vb{a}}^{\vb{b}}{\vb{v}\cdot\dd{\vb{l}}}$$
-		where $\vb{v}$ is a vector function, $\dd{\vb{l}}$ is the infinitesimal displacement vector, and the integral is to be carried out along a prescribed path from
+		where $\vb{v}$ is a vector field, $\dd{\vb{l}}$ is the infinitesimal displacement vector, and the integral is to be carried out along a prescribed path from
 		point $\vb{a}$ to point $\vb{b}$, as shown in the figure below.
 		\begin{figure}[h!]
 			\centering
@@ -854,19 +854,83 @@
 		\end{itemize}
 	
 	\subsection{The surface integral}
+		A surface integral is an expression of the form
+		$$\int_{S}{\vb{v}\cdot\dd{\vb{a}}}$$
+		where $\vb{v}$ is some vector field, the integral is over a specified surface $S$, and $\dd{\vb{a}}$ is an infinitesimal patch of area, with direction perpendicular to the surface, as shown in the figure below.
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.35\textwidth]{figures/fig_surface-integral.png}
+		\end{figure}
+		\begin{itemize}
+			\item If the surface $S$ in question is closed, then we denote the surface integral of $\vb{v}$ over $S$ as
+			$$\oint\limits_{S}{\vb{v}\cdot\dd{\vb{a}}}$$
+			\item If $\vb{v}$ describes the flow of a fluid (mass per unit area per unit time), then $\int{\vb{v}\cdot\dd{\vb{a}}}$ represents the total mass per unit time passing through the surface. Hence the alternative name, ``flux.''
+		\end{itemize}
+		
 	
-		\subsubsection{Flux of a vector field}
+		%\subsubsection{Flux of a vector field}
 		
 	\subsection{The volume integral}
+		A volume integral is an expression of the form
+		$$\int_{V}{T\dd{\tau}}$$
+		where $T$ is a scalar field and $\dd{\tau}$ is an infinitesimal volume element.
+		\begin{itemize}
+			\item In Cartesian coordinates, the volume element is $\dd{\tau}=\dd{x}\dd{y}\dd{z}$, and so the volume integral is the following triple integral:
+			$$\int_{V}{T\dd{\tau}}=\iiint{T\dd{x}\dd{y}\dd{z}}$$
+			\item The volume integral of a vector field $\vb{v}=v_x\vu{x}+v_y\vu{y}+v_z\vu{z}$ is obtained by finding the volume integrals of its components separately, i.e.
+			\begin{align*}
+				\int_{V}{\vb{v}\dd{\tau}}&=\vu{x}\int_{V}{v_x\dd{\tau}}+\vu{y}\int_{V}{v_y\dd{\tau}}+\vu{z}\int_{V}{v_z\dd{\tau}}
+			\end{align*}
+		\end{itemize}
+		
+	\subsection{Fundamental theorem for gradients}
+		The line integral of the gradient of a scalar field equals the difference between the values of the field at the boundary points of the path of integration.
+		
+		Given a scalar field $T$ and a path bounded by the points $\vb{a}$ and $\vb{b}$, we have
+		\begin{align*}
+			\boxed{\int_{\vb{a}}^{\vb{b}}{\qty(\grad{T})\cdot\dd{\vb{l}}}=T(\vb{b})-T(\vb{a})}
+		\end{align*}
+		
+		\subsubsection*{Corollary 1}
+			The integral $\int_{\vb{a}}^{\vb{b}}{\grad{T}\cdot\dd{\vb{l}}}$ is independent of the path taken from $\vb{a}$ to $\vb{b}$.
+		
+		\subsubsection*{Corollary 2}
+			The integral $\oint{\grad{T}\cdot\dd{\vb{l}}}=0$ since the beginning and end points are identical, and hence $T(\vb{b})-T(\vb{a})=0$.
 	
 	\subsection{Gauss' divergence theorem}
+		The volume integral of the divergence of a vector field over a given volume equals the surface integral of the vector field over the closed surface bounding the volume.
+		
+		Given a vector field $\vb{v}$ and a volume $V$ which is bounded by the closed surface $S$, we have
+		\begin{align*}
+			\boxed{\int_{V}{\qty(\div{\vb{v}})\dd{\tau}}=\oint_{S}{\vb{v}\cdot\dd{\vb{a}}}}
+		\end{align*}
 	
-		\subsubsection{Applications}
+		%\subsubsection{Applications}
 		
 	\subsection{Stokes' theorem}
-	
-		\subsubsection{Applications}
+		The surface integral of the curl of a vector field over a given open surface equals the line integral of the vector field over the closed curve bounding the surface.
 		
-	\subsection{Green's theorem}
+		Given a vector field $\vb{v}$ and a surface $S$ which is bounded by the closed curve $C$, we have	
+		\begin{align*}
+			\boxed{ \int_{S}{\qty(\curl{\vb{v}})\cdot\dd{\vb{a}}}=\oint_{C}{\vb{v}\cdot\dd{\vb{l}}} }
+		\end{align*}
+		
+		\subsubsection*{Corollary 1}
+			The integral $\int{\qty(\curl{\vb{v}})\cdot\dd{\vb{a}}}$ depends only on the boundary curve and not on the particular surface used.
+		
+		\subsubsection*{Corollary 2}
+			The integral $\oint{\qty(\curl{\vb{v}})\cdot\dd{\vb{a}}}=0$ for \emph{any closed surface}.
 	
-		\subsubsection{Applications}
+		%\subsubsection{Applications}
+		
+	\newpage
+	\subsection{Green's theorem}
+		Let $R$ be a closed bounded region in the $xy$-plane whose boundary $C$ consists of finitely many smooth curves. Let $F_1(x,y)$ and $F_2(x,y)$ be functions that are continuous and have continuous partial derivatives $\pdv*{F_1}{y}$ and $\pdv*{F_2}{x}$ everywhere in some domain containing $R$. Then	
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.3\textwidth]{figures/fig_greens-theorem.png}
+		\end{figure}
+		
+		Here we integrate along the entire boundary $C$ of $R$ in such a sense that $R$ is on the left as we advance in the direction of integration, as shown in the figure above.
+	
+		%\subsubsection{Applications}
